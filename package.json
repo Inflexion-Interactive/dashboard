@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "./node_modules/mocha/bin/mocha -w lib/index.js test/index.js"
+    "test": "mocha -w lib/index.js test/index.js"
   },
   "author": "Kevin Pruett",
   "license": "ISC",

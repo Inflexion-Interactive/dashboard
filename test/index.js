@@ -42,21 +42,11 @@ describe('Request to /auth/google route', function() {
 
 describe('Request to /oauth2callback route', function() {
 
-  it('Returns 200 status', function(done) {
+  it('Returns 500 status on direct/non-generated paths', function(done) {
 
     request(app)
       .get('/oauth2callback?code=123abc')
-      .expect(200, done)
+      .expect(500, done)
 
   });
-
-/*
- *  it('Returns a payload of information', function(done) {
- *
- *    request(app)
- *      .get('/oauth2callback?code=123abc')
- *      .expect(/payload/, done)
- *
- *  });
- */
 });
